@@ -16,6 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ScreenTimeoutQuickAction"
         tools:targetApi="31">
+        <activity
+            android:name=".SettingsActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/Theme.ScreenTimeoutQuickAction">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
+        </activity>
+
         <service
             android:name=".ScreenTimeoutTile"
             android:exported="true"
